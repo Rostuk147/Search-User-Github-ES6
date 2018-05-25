@@ -6,7 +6,7 @@
                 <div class="row">
                 <div class="col-lg-5">
                     <img src="${user.avatar_url}">
-                    <a href="${user.url}" target ="_blank" class="btn btn-primary btn-block mb-4">Visit Profile</a>
+                    <a href="${user.html_url}" target ="_blank" class="btn btn-primary btn-block mb-4">Visit Profile</a>
                 </div>
                 <div class="col-lg-7">
                     <ul class="list-group">

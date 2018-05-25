@@ -3,8 +3,7 @@ const gitHub = new GitHub();
 const ui = new UI();
 
 const inputVal = document.getElementById('searchInput');
-
-document.getElementById('getUser').addEventListener('click', ()=>{
+const search = ()=>{
     gitHub.get(inputVal.value)
     .then(data => {
         if(data.message === "Not Found"){
@@ -17,4 +16,13 @@ document.getElementById('getUser').addEventListener('click', ()=>{
     })
     .catch(err => console.log(err))
     ui.clearFields(inputVal)
+}
+document.getElementById('getUser').addEventListener('click', search)
+document.getElementById('searchInput').addEventListener('keyup', (e)=>{
+    e.preventDefault();
+    if(e.keyCode === 13){
+        search();
+    }
 })
+
+
